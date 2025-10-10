@@ -5,15 +5,105 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:backgroundTint="@color/fundo"
     tools:context=".MainActivity">
 
+    <ImageView
+        android:id="@+id/imageViewLogo"
+        android:layout_width="45dp"
+        android:layout_height="65dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toStartOf="@+id/textViewSerie"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/logo" />
+
     <TextView
+        android:id="@+id/textViewSerie"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:text="Séries"
+        android:textColor="@color/menu_navegacao"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageViewLogo"
+        app:layout_constraintEnd_toStartOf="@+id/textViewFilme"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/imageViewLogo"
+        app:layout_constraintTop_toTopOf="@+id/imageViewLogo" />
+
+    <TextView
+        android:id="@+id/textViewFilme"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Filmes"
+        android:textColor="@color/menu_navegacao"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewSerie"
+        app:layout_constraintEnd_toStartOf="@+id/textViewMinhaLista"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/textViewSerie"
+        app:layout_constraintTop_toTopOf="@+id/textViewSerie" />
+
+    <TextView
+        android:id="@+id/textViewMinhaLista"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Minha lista"
+        android:textColor="@color/menu_navegacao"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewFilme"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/textViewFilme"
+        app:layout_constraintTop_toTopOf="@+id/textViewFilme" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_percent="0.20"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_percent="0.45" />
+
+    <ImageView
+        android:id="@+id/imageViewSoundOfHope"
+        android:layout_width="150dp"
+        android:layout_height="100dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/guideline1"
+        app:layout_constraintBottom_toBottomOf="@id/guideline2"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:srcCompat="@drawable/logomovie"
+        tools:layout_editor_absoluteY="85dp" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        tools:layout_editor_absoluteX="101dp"
+        tools:layout_editor_absoluteY="216dp" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        tools:layout_editor_absoluteX="195dp"
+        tools:layout_editor_absoluteY="224dp" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        tools:layout_editor_absoluteX="299dp"
+        tools:layout_editor_absoluteY="214dp" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
