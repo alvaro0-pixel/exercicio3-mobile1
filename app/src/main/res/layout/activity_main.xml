@@ -62,48 +62,133 @@
         android:id="@+id/guideline1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintGuide_percent="0.20"/>
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.1" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintGuide_percent="0.45" />
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.25" />
 
     <ImageView
         android:id="@+id/imageViewSoundOfHope"
         android:layout_width="150dp"
         android:layout_height="100dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@id/guideline1"
         app:layout_constraintBottom_toBottomOf="@id/guideline2"
-        app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/logomovie"
-        tools:layout_editor_absoluteY="85dp" />
+        app:layout_constraintEnd_toStartOf="@+id/linhaGuiaDireita"
+        app:layout_constraintStart_toStartOf="@+id/linhaGuiaEsquerda"
+        app:layout_constraintTop_toTopOf="@id/guideline1"
+        app:srcCompat="@drawable/logomovie" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/textViewEmpolgante"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="TextView"
-        tools:layout_editor_absoluteX="101dp"
-        tools:layout_editor_absoluteY="216dp" />
+        android:text="Empolgante"
+        android:textColor="@color/menu_navegacao"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewDeus1"
+        app:layout_constraintEnd_toStartOf="@+id/textViewDeus1"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/linhaGuiaEsquerda"
+        app:layout_constraintTop_toTopOf="@+id/textViewDeus1" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/textViewDeus1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="TextView"
-        tools:layout_editor_absoluteX="195dp"
-        tools:layout_editor_absoluteY="224dp" />
+        android:text="Deus"
+        app:layout_constraintTop_toTopOf="@id/guideline2"
+        android:textColor="@color/menu_navegacao"
+        app:layout_constraintEnd_toStartOf="@+id/textViewEsperanca"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/textViewEmpolgante"
+        tools:layout_editor_absoluteY="209dp" />
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/textViewEsperanca"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="TextView"
-        tools:layout_editor_absoluteX="299dp"
-        tools:layout_editor_absoluteY="214dp" />
+        android:text="Esperança"
+        android:textColor="@color/menu_navegacao"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewDeus1"
+        app:layout_constraintEnd_toStartOf="@+id/linhaGuiaDireita"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/textViewDeus1"
+        app:layout_constraintTop_toTopOf="@+id/textViewDeus1" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/linhaGuiaDireita"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.92" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/linhaGuiaEsquerda"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.07" />
+
+    <Button
+        android:id="@+id/btAssistir"
+        android:layout_width="125dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="28dp"
+        android:drawableLeft="@drawable/ic_executar"
+        android:text="Assistir"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toStartOf="@+id/button3"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/button2"
+        app:layout_constraintTop_toBottomOf="@+id/textViewDeus1" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="116dp"
+        android:layout_height="62dp"
+        android:backgroundTint="@android:color/transparent"
+        android:drawableTop="@drawable/ic_adicionar"
+        android:text="MINHA LISTA"
+        android:textSize="10sp"
+        app:iconSize="8sp"
+        app:layout_constraintBottom_toBottomOf="@+id/btAssistir"
+        app:layout_constraintEnd_toStartOf="@+id/btAssistir"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/linhaGuiaEsquerda"
+        app:layout_constraintTop_toTopOf="@+id/btAssistir"
+        app:layout_editor_absoluteX="36dp"
+        app:layout_editor_absoluteY="256dp" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@android:color/transparent"
+        android:drawableTop="@drawable/ic_informacao"
+        android:padding="0dp"
+        android:textSize="10sp"
+        android:text="DETALHES"
+        app:iconSize="8sp"
+        app:layout_constraintBottom_toBottomOf="@+id/btAssistir"
+        app:layout_constraintEnd_toStartOf="@+id/linhaGuiaDireita"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btAssistir"
+        app:layout_constraintTop_toTopOf="@+id/btAssistir"
+        app:layout_editor_absoluteX="279dp"
+        app:layout_editor_absoluteY="242dp" />
+
+    <TextView
+        android:id="@+id/textViewLancamentos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Lançamentos"
+        android:textColor="@color/menu_navegacao"
+        app:layout_constraintStart_toStartOf="@+id/linhaGuiaEsquerda"
+        app:layout_constraintTop_toBottomOf="@+id/btAssistir" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
