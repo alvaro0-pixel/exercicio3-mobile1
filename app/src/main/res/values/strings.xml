@@ -1,3 +1,13 @@
 <resources>
-    <string name="app_name">Exercicio3</string>
+    <string name="app_name" translatable="false">Exercicio3</string>
+    <string name="series">Séries</string>
+    <string name="filmes">Filmes</string>
+    <string name="minha_lista">Minha lista</string>
+    <string name="comedia">Comédia</string>
+    <string name="animacao">Animação</string>
+    <string name="familia">Família</string>
+    <string name="assistir">Assistir</string>
+    <string name="minha_lista_plus">MINHA LISTA</string>
+    <string name="detalhes">DETALHES</string>
+    <string name="lancamentos">Lançamentos</string>
 </resources>

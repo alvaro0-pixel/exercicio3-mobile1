@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="series">Serie</string>
+    <string name="filmes">Film</string>
+    <string name="comedia">Commedia</string>
+    <string name="animacao">Animazione</string>
+    <string name="minha_lista">La Mia Lista</string>
+    <string name="assistir">Guarda</string>
+    <string name="minha_lista_plus">LA MIA LISTA</string>
+    <string name="familia">Famiglia</string>
+    <string name="detalhes">DETTAGLI</string>
+    <string name="lancamentos">Novità</string>
+</resources>
